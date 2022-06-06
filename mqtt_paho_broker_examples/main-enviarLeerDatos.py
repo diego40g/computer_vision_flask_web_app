@@ -17,13 +17,20 @@ def on_connect(client,userdata,flags,rc):
     if rc==0:
         FLAG_CONNECTED=1
         print("Conectando a MQTT Broker!!!")
+        client.subscribe(TOPIC)
     else:
         print("Fallo al conectar, error en {rc}".format(rc=rc),)
+
+def on_message(client,userdata,msg):
+    print("Recibido `{payload}` desde `{topic}` topic".format(
+        payload=msg.payload.decode(), topic=msg.topic
+    ))
 
 def connect_mqtt():
     client=mqtt_client.Client(CLIENT_ID)
     client.username_pw_set(USERNAME,PASSWORD)
     client.on_connect=on_connect
+    client.on_message=on_message
     client.connect(BROKER,PORT)
     return client
 
