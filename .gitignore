@@ -1,3 +1,5 @@
 env
 /opencv-examples/Class/*
 /opencv-examples/initial-examples/.*
+
+__pycache__
