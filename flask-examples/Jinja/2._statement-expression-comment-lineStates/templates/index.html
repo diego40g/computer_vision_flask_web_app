@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flask-Test</title>
+  </head>
+  <body>
+    <h1>Bienvenido a {{name}}</h1>
+    <p>Hola {{name}}, tu edad es {{age}}</p>
+    {% if age >= 18 %}
+    <p>Tu eres mayor de edad</p>
+    {% else %}
+    <p>Tu eres menor de edad</p>
+    {% endif %}
+  </body>
+</html>
