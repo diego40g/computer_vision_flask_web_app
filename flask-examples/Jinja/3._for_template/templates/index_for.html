@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for-loop</title>
+  </head>
+  <body>
+    <h1>For loops</h1>
+    <table border="1px" align="center">
+        <tr>
+            <th>Materia</th>
+            <th>Calificación</th>
+            <th>Apr/Rep</th>
+        </th>
+        {% for key,value in data.items() %}
+            <tr>
+                <td>{{key}}</td> 
+                <td align="center">{{value}}</td>
+                <td align="center">
+                    {% if value >=50 %}
+                        <span style="color:green">☑</span>
+                    {% else %}
+                        <span style="color:red">☒</span>
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+  </body>
+</html>
