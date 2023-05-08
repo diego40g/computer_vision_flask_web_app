@@ -3,3 +3,6 @@ env
 /opencv-examples/initial-examples/.*
 
 __pycache__
+
+*.rar
+*.zip
