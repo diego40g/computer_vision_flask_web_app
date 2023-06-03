@@ -1,8 +1,13 @@
 env
 /opencv-examples/Class/*
 /opencv-examples/initial-examples/.*
+.vscode
 
 __pycache__
 
 *.rar
 *.zip
+
+*.png
+*.jpg
+*.log
